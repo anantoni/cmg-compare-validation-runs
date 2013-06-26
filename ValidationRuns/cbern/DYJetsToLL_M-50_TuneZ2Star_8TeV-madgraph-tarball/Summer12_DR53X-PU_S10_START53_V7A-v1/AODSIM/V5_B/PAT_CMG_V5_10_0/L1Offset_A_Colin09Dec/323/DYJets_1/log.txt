@@ -1,0 +1,77 @@
+starting loop at event 0 to process 10000 events.
+MCComponent: DYJets
+	addWeight      :   1.0
+	dataset_entries:   29954799
+	effCorrFactor  :   1
+	files          :   ['root://eoscms//eos/cms/store/cmst3/user/cbern/CMG/DYJetsToLL_M-50_TuneZ2Star_8TeV-madgraph-tarball/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM/V5_B/PAT_CMG_V5_10_0/L1Offset_A_Colin09Dec/cmgTuple_0.root', 'root://eoscms//eos/cms/store/cmst3/user/cbern/CMG/DYJetsToLL_M-50_TuneZ2Star_8TeV-madgraph-tarball/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM/V5_B/PAT_CMG_V5_10_0/L1Offset_A_Colin09Dec/cmgTuple_1.root', 'root://eoscms//eos/cms/store/cmst3/user/cbern/CMG/DYJetsToLL_M-50_TuneZ2Star_8TeV-madgraph-tarball/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM/V5_B/PAT_CMG_V5_10_0/L1Offset_A_Colin09Dec/cmgTuple_10.root', 'root://eoscms//eos/cms/store/cmst3/user/cbern/CMG/DYJetsToLL_M-50_TuneZ2Star_8TeV-madgraph-tarball/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM/V5_B/PAT_CMG_V5_10_0/L1Offset_A_Colin09Dec/cmgTuple_100.root', 'root://eoscms//eos/cms/store/cmst3/user/cbern/CMG/DYJetsToLL_M-50_TuneZ2Star_8TeV-madgraph-tarball/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM/V5_B/PAT_CMG_V5_10_0/L1Offset_A_Colin09Dec/cmgTuple_101.root']
+	intLumi        :   1.0
+	isData         :   False
+	isEmbed        :   False
+	isMC           :   True
+	nGenEvents     :   29962523.1517
+	splitFactor    :   1
+	triggers       :   []
+	xSection       :   3542.25081
+beginLoop VertexAnalyzer
+beginLoop ZMuMuAnalyzer
+beginLoop ZHistogrammer
+
+Analyzer: VertexAnalyzer
+	fixedWeight    :   1
+	goodVertices   :   offlinePrimaryVertices
+	verbose        :   False
+	vertexWeight   :   None
+Counter GoodVertex :
+	 All Events                                   10000 	 1.00 	 1.0000
+	 Events With Good Vertex                      10000 	 1.00 	 1.0000
+
+Average vertexWeight   :   1.0000 +-   0.0000
+
+
+Analyzer: ZMuMuAnalyzer
+	eta1           :   2.4
+	eta2           :   2.4
+	iso1           :   0.3
+	iso2           :   0.3
+	m_max          :   120
+	m_min          :   50
+	pt1            :   10
+	pt2            :   10
+	triggerMap     :   None
+	verbose        :   False
+Counter DiLepton :
+	 all events                                   10000 	 1.00 	 1.0000
+	 > 0 di-lepton                                 3686 	 0.37 	 0.3686
+	 lepton accept                                 3686 	 1.00 	 0.3686
+	 third lepton veto                             3686 	 1.00 	 0.3686
+	 leg1 offline cuts passed                      2178 	 0.59 	 0.2178
+	 leg1 trig matched                                0 	 0.00 	 0.0000
+	 leg2 offline cuts passed                      1308 	 -1.00 	 0.1308
+	 leg2 trig matched                                0 	 0.00 	 0.0000
+	 50.0 < m < 120.0                              1287 	 -1.00 	 0.1287
+	 exactly 1 di-lepton                           1287 	 1.00 	 0.1287
+
+
+
+
+Analyzer: ZHistogrammer
+	verbose        :   False
+
+
+
+
+MCComponent: DYJets
+	addWeight      :   1.0
+	dataset_entries:   29954799
+	effCorrFactor  :   1
+	files          :   ['root://eoscms//eos/cms/store/cmst3/user/cbern/CMG/DYJetsToLL_M-50_TuneZ2Star_8TeV-madgraph-tarball/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM/V5_B/PAT_CMG_V5_10_0/L1Offset_A_Colin09Dec/cmgTuple_0.root', 'root://eoscms//eos/cms/store/cmst3/user/cbern/CMG/DYJetsToLL_M-50_TuneZ2Star_8TeV-madgraph-tarball/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM/V5_B/PAT_CMG_V5_10_0/L1Offset_A_Colin09Dec/cmgTuple_1.root', 'root://eoscms//eos/cms/store/cmst3/user/cbern/CMG/DYJetsToLL_M-50_TuneZ2Star_8TeV-madgraph-tarball/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM/V5_B/PAT_CMG_V5_10_0/L1Offset_A_Colin09Dec/cmgTuple_10.root', 'root://eoscms//eos/cms/store/cmst3/user/cbern/CMG/DYJetsToLL_M-50_TuneZ2Star_8TeV-madgraph-tarball/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM/V5_B/PAT_CMG_V5_10_0/L1Offset_A_Colin09Dec/cmgTuple_100.root', 'root://eoscms//eos/cms/store/cmst3/user/cbern/CMG/DYJetsToLL_M-50_TuneZ2Star_8TeV-madgraph-tarball/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM/V5_B/PAT_CMG_V5_10_0/L1Offset_A_Colin09Dec/cmgTuple_101.root']
+	intLumi        :   1.0
+	isData         :   False
+	isEmbed        :   False
+	isMC           :   True
+	nGenEvents     :   29962523.1517
+	splitFactor    :   1
+	triggers       :   []
+	xSection       :   3542.25081
+
+number of events processed: 10000

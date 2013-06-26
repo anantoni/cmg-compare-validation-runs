@@ -1,0 +1,20 @@
+user_cache=$1
+root_file_1=$2
+root_file_2=$3
+out_dir=$4
+cache_size=$(du -sk ../PlotComparisons|awk '{print $1}')
+if [[ $cache_size -gt 500000 ]] ; then
+user_cache_size=$(du -sk ../PlotComparisons/$user_cache|awk '{print $1}')
+if [[ $user_cache_size -gt 10000 ]] ; then
+rm -rf ../PlotComparisons/$user_cache
+fi
+fi
+export VO_CMS_SW_DIR=/afs/cern.ch/cms
+source $VO_CMS_SW_DIR/cmsset_default.sh
+cd ../CMGTools/CMSSW_5_3_9/src
+eval `scramv1 runtime -sh`
+mkdir -p ../../../PlotComparisons/$user_cache
+cd ../../../PlotComparisons/$user_cache
+python $CMSSW_BASE/src/CMGTools/RootTools/python/utils/fileComparator.py $root_file_1 $root_file_2 -o $out_dir -w -1 histogram_1 -2 histogram_2
+echo "<?php include( '/cmg-compare-validation-runs/View/header/header.php' ); echo 'histogram_1: $root_file_1<br>'; echo 'histogram_2: $root_file_2<br>'; $root_fileinclude( './index.html' );include( '/cmg-compare-validation-runs/View/footer/footer.php' );" > 
+$out_dir/comparison_results.php
